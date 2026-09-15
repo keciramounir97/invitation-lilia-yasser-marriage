@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f1ec">
+  <meta name="description" content="Invitation au mariage de Yasser et Lilia — 25 septembre 2026, Le Chic d’Orient, Alger.">
+  <title>Invitation Mariage | Yasser & Lilia</title>
+
+  <link rel="preload" as="image" href="assets/enveloppe-biege.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-active">
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5.2l3.2 1.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.2A7 7 0 1 0 5 9.8C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.8" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21h16M6 21V7l12-3v17M10 10h.01M14 10h.01M10 14h.01M14 14h.01M10 18h.01M14 18h.01" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M8 4l8 2v14l-8-2V4zM8 4L4 6v14l4-2M16 6l4-2v14l-4 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.4-2h7.2L17 8h3v11H4V8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13.2" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.2l2.6 2.6L16.2 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.2 7.2l9.6 9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 19s-7-4.4-7-9.2A4 4 0 0 1 12 7a4 4 0 0 1 7 2.8C19 14.6 12 19 12 19z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="floatingLogo" class="floating-logo" aria-hidden="true">
+    <img src="assets/RoyalDigitalInvite.svg" alt="" decoding="async">
+  </div>
+
+  <section id="scene1" class="intro-screen" aria-label="Ouverture de l’invitation">
+    <div id="introTrigger" class="intro-trigger" role="button" tabindex="0" aria-label="Ouvrir l’invitation">
+      <img
+        src="assets/enveloppe-biege.png"
+        alt="Invitation mariage Yasser et Lilia"
+        class="intro-cover"
+        fetchpriority="high"
+        decoding="async"
+      >
+      <p class="intro-hint">Touchez l’enveloppe</p>
+    </div>
+
+    <video
+      id="video1"
+      class="intro-video"
+      playsinline
+      muted
+      preload="none"
+      poster="assets/design1-end.jpg"
+    >
+      <source src="assets/design1.mp4" type="video/mp4">
+    </video>
+
+    <img
+      id="videoEndFrame"
+      class="video-end-frame"
+      src="assets/design1-end.jpg"
+      alt="Lilia & Yasser — 25 septembre 2026"
+      loading="lazy"
+      decoding="async"
+    >
+  </section>
+
+  <main id="scene2" class="hidden main-content">
+
+    <section id="countdownSection" class="section section-light">
+      <div class="container center narrow">
+        <div class="section-head reveal-up">
+          <p class="section-label">Notre grand jour</p>
+          <h2 class="section-title">Le compte à rebours est lancé</h2>
+          <p class="section-arabic" dir="rtl">موعدنا يقترب بإذن الله</p>
+        </div>
+
+        <div class="date-hero reveal-up">
+          <p class="date-hero-kicker">Vendredi</p>
+          <div class="date-hero-row">
+            <span class="date-hero-num">25</span>
+            <div class="date-hero-meta">
+              <strong>Septembre</strong>
+              <span>2026</span>
+            </div>
+          </div>
+          <p class="date-hero-arabic" dir="rtl">٢٥ سبتمبر ٢٠٢٦</p>
+        </div>
+
+        <div class="meta-pills reveal-up">
+          <span>16h00 — 20h00</span>
+          <span>Le Chic d’Orient</span>
+        </div>
+
+        <div class="event-highlight reveal-up">
+          <div class="event-highlight-icon" aria-hidden="true">
+            <svg><use href="#i-clock"></use></svg>
+          </div>
+          <div class="event-highlight-content">
+            <span class="event-highlight-label">Réception de visite</span>
+            <strong>De 16h00 à 20h00</strong>
+            <p>Nous aurons le plaisir de vous accueillir de 16h00 à 20h00 pour partager ce moment de joie.</p>
+          </div>
+        </div>
+
+        <div class="countdown">
+          <div class="count-box reveal-up">
+            <span id="days">00</span>
+            <small>Jours</small>
+          </div>
+          <div class="count-box reveal-up">
+            <span id="hours">00</span>
+            <small>Heures</small>
+          </div>
+          <div class="count-box reveal-up">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="count-box reveal-up">
+            <span id="seconds">00</span>
+            <small>Secondes</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark section-with-banner">
+      <div class="full-banner reveal-zoom">
+        <img src="assets/lieu.jpg" alt="Salle de dîner Le Chic d’Orient" class="section-banner-image" loading="lazy" decoding="async">
+      </div>
+
+      <div class="container">
+        <div class="cards-grid">
+          <article class="card card-dark reveal-left">
+            <p class="card-subtitle">
+              <svg class="icon"><use href="#i-pin"></use></svg>
+              Adresse
+            </p>
+            <h3>Salle de dîner</h3>
+            <p class="card-line">
+              <svg class="icon"><use href="#i-building"></use></svg>
+              Le Chic d’Orient
+            </p>
+            <p class="card-line">
+              <svg class="icon"><use href="#i-pin"></use></svg>
+              Bordj El Kiffan, Alger
+            </p>
+          </article>
+
+          <article class="card card-dark reveal-right">
+            <p class="card-subtitle">
+              <svg class="icon"><use href="#i-map"></use></svg>
+              Navigation
+            </p>
+            <h3>Google Maps</h3>
+            <p class="card-line">Itinéraire direct vers la salle.</p>
+            <a class="map-cta" href="https://maps.app.goo.gl/jcdSnx92PjjFt8eQ8?g_st=ic" target="_blank" rel="noopener">
+              Ouvrir l’itinéraire
+              <svg class="icon"><use href="#i-arrow"></use></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="map-box reveal-up">
+          <iframe
+            id="mapFrame"
+            data-src="https://www.google.com/maps?q=Q63F+XHR+Salle+de+diner+Le+Chic+d'orient,+Bordj+El+Kiffan&output=embed"
+            title="Salle de dîner Le Chic d’Orient"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head center reveal-up">
+          <p class="section-label">À l’attention de nos invités</p>
+          <h2 class="section-title">Quelques consignes</h2>
+          <p class="section-arabic" dir="rtl">ملاحظات هامة لضيوفنا الكرام</p>
+        </div>
+
+        <div class="cards-grid notes-grid">
+          <article class="card card-light reveal-left">
+            <p class="card-subtitle">
+              <svg class="icon"><use href="#i-camera"></use></svg>
+              Photographie
+            </p>
+            <h3>Photos &amp; vidéos</h3>
+            <p class="note-line">
+              <svg class="icon"><use href="#i-check"></use></svg>
+              <span>À votre arrivée, vous pouvez photographier librement.</span>
+            </p>
+            <p class="note-line">
+              <svg class="icon"><use href="#i-ban"></use></svg>
+              <span>Merci de ne pas filmer ni photographier pendant l’entrée et la présence de la mariée.</span>
+            </p>
+            <p class="card-arabic" dir="rtl">
+              ممنوع التصوير كي تكون العروسة. كي تدخلوا نورمال، التصوير مسموح.
+            </p>
+          </article>
+
+          <article class="card card-light reveal-right">
+            <p class="card-subtitle">
+              <svg class="icon"><use href="#i-heart"></use></svg>
+              Enfants
+            </p>
+            <h3>Les tout-petits</h3>
+            <p class="note-line">
+              <svg class="icon"><use href="#i-heart"></use></svg>
+              <span>Les enfants en bas âge restent auprès de leurs parents tout au long de la réception.</span>
+            </p>
+            <p class="card-arabic" dir="rtl">
+              الأطفال الصغار جنب أوليائهم
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container center narrow reveal-up">
+        <div class="footer-divider"></div>
+        <h1 class="intro-title">Yasser &amp; Lilia</h1>
+        <p class="footer-date">25 septembre 2026 · 16h00</p>
+        <p class="footer-text">
+          Avec amour, joie et gratitude, nous serons honorés de célébrer ce moment avec vous.
+        </p>
+        <p class="footer-arabic" dir="rtl">حضوركم يسعدنا ويزيد فرحتنا</p>
+        <div class="footer-divider footer-divider-bottom"></div>
+        <p class="footer-copyright">© 2026 Royal Digital Invite — Tous droits réservés.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
