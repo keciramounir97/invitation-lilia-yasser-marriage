@@ -66,19 +66,20 @@ function setMusicUi(isMuted) {
   );
 }
 
-function startMusic() {
+function playMusic() {
   if (!bgMusic) return;
   document.body.classList.add("music-ready");
-  if (musicMuted) {
-    bgMusic.pause();
-    return;
-  }
   bgMusic.volume = 0.85;
   const promise = bgMusic.play();
   if (promise !== undefined) {
     promise.catch(() => {});
   }
   setMusicUi(false);
+}
+
+function startMusic() {
+  if (musicMuted) return;
+  playMusic();
 }
 
 function toggleMusic() {
@@ -90,12 +91,7 @@ function toggleMusic() {
     return;
   }
 
-  if (!introStarted) {
-    setMusicUi(!musicMuted);
-    return;
-  }
-
-  startMusic();
+  playMusic();
 }
 
 function showScene2() {
