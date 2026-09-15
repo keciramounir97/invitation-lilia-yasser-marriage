@@ -8,6 +8,7 @@
   <title>Invitation Mariage | Yasser & Lilia</title>
 
   <link rel="preload" as="image" href="assets/enveloppe-biege.png">
+  <link rel="preload" as="image" href="assets/design1-end.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -54,23 +55,12 @@
       <p class="intro-hint">Touchez l’enveloppe</p>
     </div>
 
-    <video
-      id="video1"
-      class="intro-video"
-      playsinline
-      muted
-      preload="none"
-      poster="assets/design1-end.jpg"
-    >
-      <source src="assets/design1.mp4" type="video/mp4">
-    </video>
-
     <img
-      id="videoEndFrame"
-      class="video-end-frame"
+      id="introPhoto"
+      class="intro-photo"
       src="assets/design1-end.jpg"
       alt="Lilia & Yasser — 25 septembre 2026"
-      loading="lazy"
+      fetchpriority="high"
       decoding="async"
     >
   </section>

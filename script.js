@@ -1,9 +1,7 @@
-const video1 = document.getElementById("video1");
 const scene1 = document.getElementById("scene1");
 const scene2 = document.getElementById("scene2");
 const introTrigger = document.getElementById("introTrigger");
 const bgMusic = document.getElementById("bgMusic");
-const videoEndFrame = document.getElementById("videoEndFrame");
 const mapFrame = document.getElementById("mapFrame");
 const musicToggle = document.getElementById("musicToggle");
 
@@ -110,30 +108,14 @@ function showScene2() {
 }
 
 function startIntro() {
-  if (introStarted || !scene1 || !video1) return;
+  if (introStarted || !scene1) return;
 
   introStarted = true;
   scene1.classList.add("is-started");
   activateFloatingLogo();
   startMusic();
 
-  video1.preload = "auto";
-  video1.loop = false;
-
-  const playPromise = video1.play();
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      scene1.classList.add("show-end-frame");
-      showScene2();
-    });
-  }
-}
-
-function freezeLastFrame() {
-  if (!scene1 || !video1) return;
-  video1.pause();
-  scene1.classList.add("show-end-frame");
-  requestAnimationFrame(showScene2);
+  window.setTimeout(showScene2, 850);
 }
 
 function handleIntroKeydown(e) {
@@ -146,23 +128,12 @@ function handleIntroKeydown(e) {
 if (introTrigger) {
   introTrigger.addEventListener("click", startIntro, { passive: true });
   introTrigger.addEventListener("keydown", handleIntroKeydown);
-  introTrigger.addEventListener("pointerenter", () => {
-    if (!introStarted && video1) video1.preload = "metadata";
-  }, { once: true, passive: true });
 }
 
 if (musicToggle) {
   musicToggle.addEventListener("click", (e) => {
     e.stopPropagation();
     toggleMusic();
-  });
-}
-
-if (video1) {
-  video1.addEventListener("ended", freezeLastFrame);
-  video1.addEventListener("error", () => {
-    if (scene1) scene1.classList.add("show-end-frame");
-    showScene2();
   });
 }
 
