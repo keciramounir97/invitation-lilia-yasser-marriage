@@ -272,6 +272,48 @@ body.logo-active .floating-logo img {
   50% { transform: translateY(-6px); }
 }
 
+.music-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 10050;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(185, 135, 146, 0.28);
+  border-radius: 50%;
+  background: rgba(255, 248, 241, 0.94);
+  color: var(--brown-deep);
+  box-shadow: 0 10px 24px rgba(70, 46, 46, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.music-toggle .music-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.music-toggle .music-icon-on {
+  display: block;
+}
+
+body.music-muted .music-toggle .music-icon-on {
+  display: none;
+}
+
+body.music-muted .music-toggle .music-icon-off {
+  display: block;
+}
+
+.music-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(70, 46, 46, 0.18);
+}
+
 .icon {
   width: 1.05em;
   height: 1.05em;
@@ -1009,6 +1051,13 @@ body.logo-active .floating-logo img {
   .floating-logo {
     width: 86px;
     height: 86px;
+  }
+
+  .music-toggle {
+    top: 10px;
+    right: 10px;
+    width: 46px;
+    height: 46px;
   }
 
   .footer-copyright {

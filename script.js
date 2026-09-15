@@ -5,10 +5,12 @@ const introTrigger = document.getElementById("introTrigger");
 const bgMusic = document.getElementById("bgMusic");
 const videoEndFrame = document.getElementById("videoEndFrame");
 const mapFrame = document.getElementById("mapFrame");
+const musicToggle = document.getElementById("musicToggle");
 
 let revealObserverInitialized = false;
 let introStarted = false;
 let mapLoaded = false;
+let musicMuted = false;
 
 function initRevealAnimations() {
   if (revealObserverInitialized) return;
@@ -53,13 +55,47 @@ function loadMap() {
   mapLoaded = true;
 }
 
+function setMusicUi(isMuted) {
+  musicMuted = isMuted;
+  document.body.classList.toggle("music-muted", isMuted);
+  if (!musicToggle) return;
+  musicToggle.setAttribute("aria-pressed", String(isMuted));
+  musicToggle.setAttribute(
+    "aria-label",
+    isMuted ? "Remettre la musique" : "Couper la musique"
+  );
+}
+
 function startMusic() {
   if (!bgMusic) return;
+  document.body.classList.add("music-ready");
+  if (musicMuted) {
+    bgMusic.pause();
+    return;
+  }
   bgMusic.volume = 0.85;
   const promise = bgMusic.play();
   if (promise !== undefined) {
     promise.catch(() => {});
   }
+  setMusicUi(false);
+}
+
+function toggleMusic() {
+  if (!bgMusic) return;
+
+  if (!bgMusic.paused) {
+    bgMusic.pause();
+    setMusicUi(true);
+    return;
+  }
+
+  if (!introStarted) {
+    setMusicUi(!musicMuted);
+    return;
+  }
+
+  startMusic();
 }
 
 function showScene2() {
@@ -117,6 +153,13 @@ if (introTrigger) {
   introTrigger.addEventListener("pointerenter", () => {
     if (!introStarted && video1) video1.preload = "metadata";
   }, { once: true, passive: true });
+}
+
+if (musicToggle) {
+  musicToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMusic();
+  });
 }
 
 if (video1) {

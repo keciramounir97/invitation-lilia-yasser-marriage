@@ -25,6 +25,8 @@
     <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.2l2.6 2.6L16.2 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.2 7.2l9.6 9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 19s-7-4.4-7-9.2A4 4 0 0 1 12 7a4 4 0 0 1 7 2.8C19 14.6 12 19 12 19z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18.5a2.6 2.6 0 1 1-1.5-2.4V7.2l10-1.7v8.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="16.4" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-note-off" viewBox="0 0 24 24"><path d="M9 18.5a2.6 2.6 0 1 1-1.5-2.4V7.2l10-1.7v8.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="16.4" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 4.5l15 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
   </svg>
 
   <audio id="bgMusic" loop preload="none">
@@ -34,6 +36,11 @@
   <div id="floatingLogo" class="floating-logo" aria-hidden="true">
     <img src="assets/RoyalDigitalInvite.svg" alt="" decoding="async">
   </div>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Couper la musique">
+    <svg class="music-icon music-icon-on" aria-hidden="true"><use href="#i-note"></use></svg>
+    <svg class="music-icon music-icon-off" aria-hidden="true"><use href="#i-note-off"></use></svg>
+  </button>
 
   <section id="scene1" class="intro-screen" aria-label="Ouverture de l’invitation">
     <div id="introTrigger" class="intro-trigger" role="button" tabindex="0" aria-label="Ouvrir l’invitation">
@@ -215,10 +222,10 @@
             <h3>Les tout-petits</h3>
             <p class="note-line">
               <svg class="icon"><use href="#i-heart"></use></svg>
-              <span>Les enfants en bas âge restent auprès de leurs parents tout au long de la réception.</span>
+              <span>Les enfants en bas âge doivent rester tout près de leurs parents, à leurs côtés, pendant toute la réception.</span>
             </p>
             <p class="card-arabic" dir="rtl">
-              الأطفال الصغار جنب أوليائهم
+              الأطفال الصغار جنب أوليائهم، لازم يبقوا قريبين منهم طول الحفلة
             </p>
           </article>
         </div>
